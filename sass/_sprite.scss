@@ -1,0 +1,107 @@
+/*
+SCSS variables are information about icon's compiled state, stored under its original file name
+
+.icon-home {
+  width: $icon-home-width;
+}
+
+The large array-like variables contain all information about a single icon
+$icon-home: x y offset_x offset_y width height total_width total_height image_path;
+*/
+$sprite-comments2-x: 0px;
+$sprite-comments2-y: 1834px;
+$sprite-comments2-offset-x: 0px;
+$sprite-comments2-offset-y: -1834px;
+$sprite-comments2-width: 512px;
+$sprite-comments2-height: 465px;
+$sprite-comments2-total-width: 512px;
+$sprite-comments2-total-height: 2299px;
+$sprite-comments2-image: '../img/sprite.png';
+$sprite-comments2: 0px 1834px 0px -1834px 512px 465px 512px 2299px '../img/sprite.png';
+$sprite-comments3-x: 0px;
+$sprite-comments3-y: 1431px;
+$sprite-comments3-offset-x: 0px;
+$sprite-comments3-offset-y: -1431px;
+$sprite-comments3-width: 512px;
+$sprite-comments3-height: 403px;
+$sprite-comments3-total-width: 512px;
+$sprite-comments3-total-height: 2299px;
+$sprite-comments3-image: '../img/sprite.png';
+$sprite-comments3: 0px 1431px 0px -1431px 512px 403px 512px 2299px '../img/sprite.png';
+$sprite-comments4-x: 0px;
+$sprite-comments4-y: 0px;
+$sprite-comments4-offset-x: 0px;
+$sprite-comments4-offset-y: 0px;
+$sprite-comments4-width: 512px;
+$sprite-comments4-height: 339px;
+$sprite-comments4-total-width: 512px;
+$sprite-comments4-total-height: 2299px;
+$sprite-comments4-image: '../img/sprite.png';
+$sprite-comments4: 0px 0px 0px 0px 512px 339px 512px 2299px '../img/sprite.png';
+$sprite-comments5-x: 0px;
+$sprite-comments5-y: 684px;
+$sprite-comments5-offset-x: 0px;
+$sprite-comments5-offset-y: -684px;
+$sprite-comments5-width: 512px;
+$sprite-comments5-height: 363px;
+$sprite-comments5-total-width: 512px;
+$sprite-comments5-total-height: 2299px;
+$sprite-comments5-image: '../img/sprite.png';
+$sprite-comments5: 0px 684px 0px -684px 512px 363px 512px 2299px '../img/sprite.png';
+$sprite-comments6-x: 0px;
+$sprite-comments6-y: 339px;
+$sprite-comments6-offset-x: 0px;
+$sprite-comments6-offset-y: -339px;
+$sprite-comments6-width: 512px;
+$sprite-comments6-height: 345px;
+$sprite-comments6-total-width: 512px;
+$sprite-comments6-total-height: 2299px;
+$sprite-comments6-image: '../img/sprite.png';
+$sprite-comments6: 0px 339px 0px -339px 512px 345px 512px 2299px '../img/sprite.png';
+$sprite-kuma-x: 0px;
+$sprite-kuma-y: 1047px;
+$sprite-kuma-offset-x: 0px;
+$sprite-kuma-offset-y: -1047px;
+$sprite-kuma-width: 372px;
+$sprite-kuma-height: 384px;
+$sprite-kuma-total-width: 512px;
+$sprite-kuma-total-height: 2299px;
+$sprite-kuma-image: '../img/sprite.png';
+$sprite-kuma: 0px 1047px 0px -1047px 372px 384px 512px 2299px '../img/sprite.png';
+
+/*
+The provided mixins are intended to be used with the array-like variables
+
+.icon-home {
+  @include sprite-width($icon-home);
+}
+
+.icon-email {
+  @include sprite($icon-email);
+}
+*/
+@mixin sprite-width($sprite) {
+  width: nth($sprite, 5);
+}
+
+@mixin sprite-height($sprite) {
+  height: nth($sprite, 6);
+}
+
+@mixin sprite-position($sprite) {
+  $sprite-offset-x: nth($sprite, 3);
+  $sprite-offset-y: nth($sprite, 4);
+  background-position: $sprite-offset-x  $sprite-offset-y;
+}
+
+@mixin sprite-image($sprite) {
+  $sprite-image: nth($sprite, 9);
+  background-image: url(#{$sprite-image});
+}
+
+@mixin sprite($sprite) {
+  @include sprite-image($sprite);
+  @include sprite-position($sprite);
+  @include sprite-width($sprite);
+  @include sprite-height($sprite);
+}

@@ -1,0 +1,79 @@
+@charset "UTF-8";
+
+body{
+  @include font-family;
+  @include font-size(14);
+}
+/*
+# font-familyの設定
+追加したいフォントがある場合は引数にフォント名を入れる。
+```
+.body{
+  @include font-family();
+}
+```
+
+
+# font-sizeの設定
+
+```
+<p>フォントサイズの例</p>
+```
+
+*/
+
+
+/*
+#ベンダープリフィックスの例
+
+.prefix{
+  @include prefix-prop(box-sizing,border-box);
+  @include prefix-both(transition,transform 0.5s linear);
+}
+*/
+
+
+
+/*
+可変長引数の例
+*/
+@mixin borders($val...){
+  border: $val;
+}
+
+
+.box{
+  @include borders(1px solid #ccc);
+}
+
+
+
+
+.icon{
+  @include sprite($sprite-kuma);
+  @include sp{
+    @include sprite-retina($sprite-comments2);
+  }
+}
+
+
+
+
+
+
+/*
+# sprite
+
+.icon{
+  @include sprite($sprite-kuma);
+  @include sp{
+    @include sprite-retina($sprite-comments2);
+  }
+}
+
+```
+<div class="icon">icon</div>
+```
+
+*/
+
