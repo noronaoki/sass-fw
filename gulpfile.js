@@ -7,6 +7,7 @@ var gulp        = require('gulp'),
     styledocco  = require('gulp-styledocco'),
     browserSync = require('browser-sync');
 
+
 // sass,pleeease
 gulp.task('sass', function() {
   gulp.src('sass/**/*.scss')
@@ -27,6 +28,7 @@ gulp.task('sass', function() {
     .pipe(gulp.dest('assets/css/'));
 });
 
+
 // sprite
 gulp.task('sprite', function () {
   var spriteData = gulp.src('tiny/sprite/*.png')
@@ -46,11 +48,10 @@ gulp.task('sprite', function () {
 
 // tiny png
 gulp.task('tinypng', function () {
-    gulp.src(['tiny/*.png', 'tiny/*.jpg'])
+    gulp.src('tiny/*')
         .pipe(tinypng('pDRurCCYmFqEjjA6qfXk85_CbkKG-POI')) // API KEYは自分の使ってください
         .pipe(gulp.dest('assets/img/'));
 });
-
 
 
 // styledocco
@@ -72,14 +73,19 @@ gulp.task('browser-sync', function(){
   });
 });
 
+
 // bs-reload
 gulp.task('bs-reload', function(){
   browserSync.reload();
 });
 
 
-gulp.task('default', ['sass', 'sprite', 'tinypng', 'styledocco', 'browser-sync'],function(){
+// watch
+gulp.task('watch', function(){
   gulp.watch('sass/**/*.scss', ['sass']);
   gulp.watch('assets/css/**/*.css', ['styledocco']);
   gulp.watch(['./*.html', 'assets/css/**/*.css'], ['bs-reload']);
 });
+
+
+gulp.task('default', ['sass', 'sprite', 'tinypng', 'browser-sync', 'watch']);
