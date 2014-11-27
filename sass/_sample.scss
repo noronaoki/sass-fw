@@ -1,42 +1,72 @@
 @charset "UTF-8";
 
 body{
-  @include font-family;
-  @include font-size(14);
-}
-/*
-# font-familyの設定
-追加したいフォントがある場合は引数にフォント名を入れる。
-```
-.body{
   @include font-family();
+  @include font-size(40);
 }
-```
+.btn{
+  display: block;
+  width: 100px;
+  height: 50px;
+  background-color: $red;
+  color: $white;
+  border-radius: 8px;
+  @include font-size(20);
+  text-align: center;
+  line-height: 50px;
+  &:hover{
+    background-color: rgba($red, 0.8);
+  }
+}
+.icon{
+  @include sprite($sprite-kuma);
+  @include sp{
+    @include sprite-retina($sprite-comments2);
+  }
+}
+.liga{
+  font-feature-settings:"liga" 1;
+  text-rendering:optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
 
 
-# font-sizeの設定
 
-```
-<p>フォントサイズの例</p>
-```
 
-*/
 
 
 /*
+
+
+
+# ボタンの例
+```
+<a class="btn">ボタン</a>
+```
+
+# リガチャー
+```
+<p class="liga">リガチャー</p>
+<p>リガチャー</p>
+<p class="liga">AVAST</p>
+<p>AVAST</p>
+```
+
 #ベンダープリフィックスの例
 
-.prefix{
+> .prefix{
   @include prefix-prop(box-sizing,border-box);
   @include prefix-both(transition,transform 0.5s linear);
 }
-*/
 
 
 
-/*
+
+
+
+
+
 可変長引数の例
-*/
 @mixin borders($val...){
   border: $val;
 }
@@ -61,7 +91,6 @@ body{
 
 
 
-/*
 # sprite
 
 .icon{
@@ -72,8 +101,8 @@ body{
 }
 
 ```
-<div class="icon">icon</div>
+    <div class="icon">icon123456789</div>
 ```
 
-*/
 
+*/

@@ -8,4 +8,5 @@ npm install --save-dev gulp-tinypng
 npm install --save-dev gulp-styledocco
 npm install --save-dev gulp.spritesmith
 npm install --save-dev browser-sync
+npm install -g gulp
 npm install -g styledocco

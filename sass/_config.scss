@@ -33,8 +33,8 @@ $prefix-default :true;
 // ファイルパス
 //
 //*************************************
-$img-path   :"/img";
-$font-path  :"/font";
+$img-path   :"../img";
+$font-path  :"../font";
 
 
 //*************************************
@@ -42,10 +42,10 @@ $font-path  :"/font";
 // フォント定義
 //
 //*************************************
-$gothic :true;
+$gothic :false;
 $serif  :false;
 $prop   :false;
-$mac    :false;
+$mac    :true;
 
 
 //*************************************

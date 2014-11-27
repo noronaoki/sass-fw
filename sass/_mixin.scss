@@ -19,39 +19,45 @@
 //*************************************
 
 @mixin font-family($add:''){
+  $list-gothic: Verdana, "游ゴシック", YuGothic, "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
+  $list-serif: "Times New Roman", "游明朝", YuMincho, "Hiragino Mincho ProN", Meiryo, serif;
+  $list-prop: Osaka-mono, "MS Gothic", monospace;
+  $list-mac: Helvetica, "Hiragino Kaku Gothic ProN", Meiryo, fantasy;
+  $list-default: Meiryo, 'MS PGothic', sans-serif;
+
   @if $gothic {
     @if $add != ''{
-      font-family: $add, Verdana, "游ゴシック", YuGothic, "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
+      font-family: $add, $list-gothic;
     }@else{
-      font-family: Verdana, "游ゴシック", YuGothic, "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
+      font-family: $list-gothic;
     }
   } 
   @else if $serif {
     @if $add != ''{
-      font-family: $add, "Times New Roman", "游明朝", YuMincho, "Hiragino Mincho ProN", Meiryo, serif;
+      font-family: $add, $list-serif;
     }@else{
-      font-family: "Times New Roman", "游明朝", YuMincho, "Hiragino Mincho ProN", Meiryo, serif;
+      font-family: $list-serif;
     }
   }
   @else if $prop {
     @if $add != ''{
-      font-family: $add, Osaka-mono, "MS Gothic", monospace;
+      font-family: $add, $list-prop;
     }@else{
-      font-family: Osaka-mono, "MS Gothic", monospace;
+      font-family: $list-prop;
     }
   }
   @else if $mac {
     @if $add != ''{
-      font-family: $add, "Hiragino Maru Gothic ProN", Meiryo, fantasy;
+      font-family: $add, $list-mac;
     }@else{
-      font-family: "Hiragino Maru Gothic ProN", Meiryo, fantasy;
+      font-family: $list-mac;
     }
   }
   @else{
     @if $add != ''{
-      font-family: $add, Meiryo, 'MS PGothic', sans-serif;
+      font-family: $add, $list-default;
     }@else{
-      font-family: Meiryo, 'MS PGothic', sans-serif;
+      font-family: $list-default;
     }
   }
 }

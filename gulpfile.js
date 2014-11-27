@@ -35,13 +35,14 @@ gulp.task('sprite', function () {
   .pipe(spritesmith({
     imgName: 'sprite.png', //スプライトの画像
     cssName: '_sprite.scss', //生成されるscss
-    imgPath: '../img/sprite.png', //生成されるscssに記載されるパス
+    imgPath: '#{$img-path}/sprite.png', //生成されるscssに記載されるパス
     cssFormat: 'scss', //フォーマット
+    algorithm: 'diagonal', //結合アルゴリズム(top-down (default), left-right, diagonal, alt-diagonal, binary-tree)
     cssVarMap: function (sprite) {
       sprite.name = 'sprite-' + sprite.name; //VarMap(生成されるScssにいろいろな変数の一覧を生成)
     }
   }));
-  spriteData.img.pipe(gulp.dest('assets/img/')); //imgNameで指定したスプライト画像の保存先
+  spriteData.img.pipe(gulp.dest('tiny/')); //imgNameで指定したスプライト画像の保存先
   spriteData.css.pipe(gulp.dest('sass/')); //cssNameで指定したcssの保存先
 });
 
@@ -83,6 +84,7 @@ gulp.task('bs-reload', function(){
 // watch
 gulp.task('watch', function(){
   gulp.watch('sass/**/*.scss', ['sass']);
+  gulp.watch('tiny/sprite/*.png', ['sprite']);
   gulp.watch('assets/css/**/*.css', ['styledocco']);
   gulp.watch(['./*.html', 'assets/css/**/*.css'], ['bs-reload']);
 });
