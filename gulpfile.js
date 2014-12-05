@@ -37,7 +37,8 @@ gulp.task('sprite', function () {
     cssName: '_sprite.scss', //生成されるscss
     imgPath: '#{$img-path}/sprite.png', //生成されるscssに記載されるパス
     cssFormat: 'scss', //フォーマット
-    algorithm: 'diagonal', //結合アルゴリズム(top-down (default), left-right, diagonal, alt-diagonal, binary-tree)
+    algorithm: 'binary-tree', //結合アルゴリズム(top-down (default), left-right, diagonal, alt-diagonal, binary-tree)
+    padding: 0, //画像同士のpadding
     cssVarMap: function (sprite) {
       sprite.name = 'sprite-' + sprite.name; //VarMap(生成されるScssにいろいろな変数の一覧を生成)
     }
@@ -90,4 +91,5 @@ gulp.task('watch', function(){
 });
 
 
+// default
 gulp.task('default', ['sass', 'sprite', 'tinypng', 'browser-sync', 'watch']);
