@@ -5,6 +5,8 @@ var gulp        = require('gulp'),
     pleeease    = require('gulp-pleeease'),
     tinypng     = require('gulp-tinypng'),
     styledocco  = require('gulp-styledocco'),
+    gif          = require('gulp-if'),
+    footer      = require('gulp-footer'),
     browserSync = require('browser-sync');
 
 
@@ -14,9 +16,8 @@ gulp.task('sass', function() {
     .pipe(plumber())
     .pipe(sass({
       style: 'expanded',
-      sourcemap:false,
+      sourcemap:true,
       sourcemapPath:'assets/css/style.css.map'
-      /*# sourceMappingURL=style.css.map */
     }))
     .pipe(pleeease({
         autoprefixer: {
@@ -25,6 +26,7 @@ gulp.task('sass', function() {
         rem:false,
         minifier: false // minify無効
     }))
+    .pipe(gulp.src('assets/css/style.css').pipe((footer('/*# sourceMappingURL=style.css.map */'))))
     .pipe(gulp.dest('assets/css/'));
 });
 
