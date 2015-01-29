@@ -16,7 +16,7 @@ gulp.task('sass', function() {
     .pipe(plumber())
     .pipe(sass({
       style: 'expanded',
-      sourcemap:true,
+      sourcemap:false,
       sourcemapPath:'assets/css/style.css.map'
     }))
     .pipe(pleeease({
