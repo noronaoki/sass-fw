@@ -1,33 +1,31 @@
 var gulp        = require('gulp'),
     sass        = require('gulp-ruby-sass'),
+    sourcemap   = require('gulp-sourcemaps'),
     plumber     = require('gulp-plumber'),
     spritesmith = require('gulp.spritesmith'),
     pleeease    = require('gulp-pleeease'),
     tinypng     = require('gulp-tinypng'),
     styledocco  = require('gulp-styledocco'),
-    gif          = require('gulp-if'),
+    gif         = require('gulp-if'),
     footer      = require('gulp-footer'),
     browserSync = require('browser-sync');
 
 
 // sass,pleeease
 gulp.task('sass', function() {
-  gulp.src('sass/**/*.scss')
-    .pipe(plumber())
-    .pipe(sass({
-      style: 'expanded',
-      sourcemap:false,
-      sourcemapPath:'assets/css/style.css.map'
-    }))
-    .pipe(pleeease({
-        autoprefixer: {
-            browsers: ['last 30 version','Firefox >= 20','ie 8','ie 9']
-        },
-        rem:false,
-        minifier: false // minify無効
-    }))
-    .pipe(gulp.src('assets/css/style.css').pipe((footer('/*# sourceMappingURL=style.css.map */'))))
-    .pipe(gulp.dest('assets/css/'));
+  return sass('sass/style.scss', {
+    style: 'expanded',
+    sourcemap: true
+  })
+  .pipe(sourcemap.write())
+  .pipe(pleeease({
+      autoprefixer: {
+          browsers: ['last 30 version','Firefox >= 20','ie 8','ie 9']
+      },
+      rem:false,
+      minifier: false // minify無効
+  }))
+  .pipe(gulp.dest('assets/css/'));
 });
 
 
