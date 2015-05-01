@@ -1,1 +1,2 @@
 # スタイルガイドサンプル
+master foward
