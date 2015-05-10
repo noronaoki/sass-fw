@@ -74,3 +74,178 @@ body{
 
 */
 
+
+
+
+
+
+
+
+
+
+// 多次元配列
+$spacer:(
+  mt:margin-top,
+  mr:margin-right,
+  mb:margin-bottom,
+  ml:margin-left,
+  pt:padding-top,
+  pr:padding-right,
+  pb:padding-bottom,
+  pl:padding-left
+);
+
+@each $key,$value in $spacer{
+  $i:0;
+  @while $i <= 30{
+    .#{$key}#{$i}{
+      #{$value}:#{$i}px;
+    }
+    $i:$i + 10;
+  }
+}
+
+@each $key,$value in $spacer{
+    @for $i from 0 through 10{
+      .#{$key}#{$i}{#{$value}:#{$i}px};
+    }
+  }
+
+
+//*************************************
+//
+// 高度な使い方
+//
+//*************************************
+
+/*
+ベンダープリフィックスの例
+*/
+.prefix{
+  @include prefix-prop(box-sizing,border-box);
+  @include prefix-both(transition,transform 0.5s linear);
+}
+
+
+/*
+ボタンの例
+*/
+
+// 引数にデフォルト値有り無しが混在する場合は、値無しが先に来ないとエラーになる
+@mixin btn-base($bg-color, $width:200px, $height:50px, $color:#000){
+  display: inline-block;
+  color: $color;
+  width: $width;
+  height: $height;
+  line-height: $height;
+  background-color: $bg-color;
+  padding:0 10px;
+  border-radius: 10px;
+  text-align: center;
+  &:hover{
+    background-color:rgba($bg-color,0.5);
+  }
+}
+
+.default-btn{
+  @include btn-base(#ccc);
+}
+.submit-btn{
+  @include btn-base(blue, 300px, 100px, #fff);
+}
+.cancel-btn{
+  @include btn-base(red, 300px, 100px);
+}
+
+
+/*
+可変長引数の例
+*/
+@mixin borders($val...){
+  border: $val;
+}
+
+
+.box{
+  @include borders(1px solid #ccc);
+}
+
+
+
+
+//*************************************
+//
+// タスクランナー
+//
+//*************************************
+
+/*
+autoprefixer
+*/
+.autoprefixer{
+  display: flex;
+  background: linear-gradient(#fff, #000);
+}
+
+
+/*
+sprite
+*/
+.icon{
+  @include sprite($sprite-kuma);
+  @include iphone5{
+    @include sprite-retina($sprite-funa);
+  }
+}
+
+
+/*
+browser-syncでmedia query
+*/
+@include min-screen(1000px){
+  h1::before{
+    content: "これはPCのブラウザです。";
+    @include font-size(30);
+  }
+}
+@include iphone5{
+  h1::before{
+    content: "こっちはiPhone5のブラウザです。";
+    @include font-size(100);
+  }
+}
+.block1{width: 200px; height: 500px; background-color: red;}
+.block2{width: 200px; height: 500px; background-color: blue;}
+.block3{width: 200px; height: 500px; background-color: pink;}
+.block4{width: 200px; height: 500px; background-color: green;}
+
+/*
+
+# ボタンの用例
+## MarkDownで書けるスタイルガイド
+行頭に何も付けなければ段落  
+改行は文末にスペース2つ  
+アンダースコア2つで挟めば__ボールド__  
+アスタリスク2つでも**OK**
+
+```
+<div class="default-btn">デフォルトボタン</div>
+```
+### これは通常
+```
+<div class="submit-btn">サブミットボタン</div>
+```
+```
+<div class="cancel-btn">キャンセルボタン</div>
+```
+### これはHover
+```
+<div class="submit-btn :hover">サブミットボタン</div>
+```
+```
+<div class="cancel-btn :hover">キャンセルボタン</div>
+```
+
+*/
+
+
