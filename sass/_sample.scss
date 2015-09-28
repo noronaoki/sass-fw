@@ -29,7 +29,9 @@ body{
     @include sprite-retina($sprite-comments4);
   }
 }
-
+.grade{
+  background: linear-gradient(#a0c4c2, #b5e3de);
+}
 
 
 
@@ -194,7 +196,7 @@ sprite
 .icon{
   @include sprite($sprite-kuma);
   @include iphone5{
-    @include sprite-retina($sprite-funa);
+    @include sprite-retina($sprite-kuma);
   }
 }
 

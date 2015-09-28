@@ -20,7 +20,7 @@ gulp.task('sass', function() {
   .pipe(sourcemap.write())
   .pipe(pleeease({
       autoprefixer: {
-          browsers: ['last 30 version','Firefox >= 20','ie 8','ie 9']
+          browsers: ['last 30 version', 'Firefox >= 20', 'ie 9']
       },
       rem:false,
       minifier: false // minify無効
