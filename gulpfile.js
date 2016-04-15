@@ -19,7 +19,7 @@ gulp.task('sass', function() {
   .pipe(sourcemap.write())
   .pipe(pleeease({
       autoprefixer: {
-          browsers: ['last 30 version', 'Firefox >= 20', 'ie 9']
+          browsers: ['last 3 version', 'ie 11']
       },
       rem:false,
       minifier: false // minify無効
@@ -50,7 +50,7 @@ gulp.task('sprite', function () {
 // tiny png
 gulp.task('tinypng', function () {
     gulp.src('tiny/*')
-        .pipe(tinypng('pDRurCCYmFqEjjA6qfXk85_CbkKG-POI')) // API KEYは自分の使ってください
+        .pipe(tinypng('pDRurCCYmFqEjjA6qfXk85_CbkKG-POI'))
         .pipe(gulp.dest('assets/img/'));
 });
 
