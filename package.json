@@ -9,16 +9,16 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "browser-sync": "^2.8.2",
-    "gulp": "^3.9.0",
+    "browser-sync": "^2.11.1",
+    "gulp": "^3.9.1",
     "gulp-footer": "^1.0.5",
     "gulp-if": "^1.2.5",
     "gulp-pleeease": "^1.2.0",
-    "gulp-plumber": "^1.0.1",
-    "gulp-ruby-sass": "^1.0.5",
-    "gulp-sourcemaps": "^1.5.2",
+    "gulp-plumber": "^1.1.0",
+    "gulp-ruby-sass": "^1.4.0",
+    "gulp-sourcemaps": "^1.6.0",
     "gulp-styledocco": "0.0.3",
     "gulp-tinypng": "^1.0.2",
-    "gulp.spritesmith": "^4.0.0"
+    "gulp.spritesmith": "^4.3.0"
   }
 }

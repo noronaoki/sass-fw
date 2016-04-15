@@ -5,7 +5,6 @@ var gulp        = require('gulp'),
     spritesmith = require('gulp.spritesmith'),
     pleeease    = require('gulp-pleeease'),
     tinypng     = require('gulp-tinypng'),
-    styledocco  = require('gulp-styledocco'),
     gif         = require('gulp-if'),
     footer      = require('gulp-footer'),
     browserSync = require('browser-sync');
@@ -56,16 +55,6 @@ gulp.task('tinypng', function () {
 });
 
 
-// styledocco
-gulp.task('styledocco', function () {
-  gulp.src('assets/css/style.css')
-    .pipe(styledocco({
-      out: 'styleguide',
-      name: 'sass-for-designers'
-    }));
-});
-
-
 // browserSync
 gulp.task('browser-sync', function(){
   browserSync({
@@ -86,7 +75,6 @@ gulp.task('bs-reload', function(){
 gulp.task('watch', function(){
   gulp.watch('sass/**/*.scss', ['sass']);
   gulp.watch('tiny/sprite/*.png', ['sprite']);
-  gulp.watch('assets/css/**/*.css', ['styledocco']);
   gulp.watch(['./*.html', 'assets/css/**/*.css'], ['bs-reload']);
 });
 

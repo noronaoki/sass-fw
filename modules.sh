@@ -1,7 +1,6 @@
 #!/bin/sh
 
 npm install -g gulp
-npm install -g styledocco
 npm install --save-dev gulp
 npm install --save-dev gulp-pleeease
 npm install --save-dev gulp-ruby-sass

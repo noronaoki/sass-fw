@@ -53,7 +53,7 @@
   */
 @mixin screen($resMin, $resMax)
 {
-  @media screen and (min-width: $resMin#{px}) and (max-width: $resMax#{px})
+  @media screen and (min-width: #{$resMinpx}) and (max-width: $resMax#{px})
   {
     @content;
   }
