@@ -7,6 +7,7 @@ var gulp        = require('gulp'),
     tinypng     = require('gulp-tinypng'),
     gif         = require('gulp-if'),
     footer      = require('gulp-footer'),
+    styleguide  = require('devbridge-styleguide'),
     browserSync = require('browser-sync');
 
 
@@ -22,7 +23,7 @@ gulp.task('sass', function() {
           browsers: ['last 3 version', 'ie 11']
       },
       rem:false,
-      minifier: false // minify無効
+      minifier: false // minify??��??
   }))
   .pipe(gulp.dest('assets/css/'));
 });
@@ -32,18 +33,18 @@ gulp.task('sass', function() {
 gulp.task('sprite', function () {
   var spriteData = gulp.src('tiny/sprite/*.png')
   .pipe(spritesmith({
-    imgName: 'sprite.png', //スプライトの画像
-    cssName: '_sprite.scss', //生成されるscss
-    imgPath: '#{$img-path}/sprite.png', //生成されるscssに記載されるパス
-    cssFormat: 'scss', //フォーマット
-    algorithm: 'binary-tree', //結合アルゴリズム(top-down (default), left-right, diagonal, alt-diagonal, binary-tree)
-    padding: 0, //画像同士のpadding
+    imgName: 'sprite.png', //??��???????��???????��??
+    cssName: '_sprite.scss', //???????????????scss
+    imgPath: '#{$img-path}/sprite.png', //???????????????scss???�?�????????????????
+    cssFormat: 'scss', //????????��????????
+    algorithm: 'binary-tree', //�??????��????��????��??(top-down (default), left-right, diagonal, alt-diagonal, binary-tree)
+    padding: 0, //??��?????�????padding
     cssVarMap: function (sprite) {
-      sprite.name = 'sprite-' + sprite.name; //VarMap(生成されるScssにいろいろな変数の一覧を生成)
+      sprite.name = 'sprite-' + sprite.name; //VarMap(???????????????Scss??????????????????�???��??�?覧�????????)
     }
   }));
-  spriteData.img.pipe(gulp.dest('tiny/')); //imgNameで指定したスプライト画像の保存先
-  spriteData.css.pipe(gulp.dest('sass/')); //cssNameで指定したcssの保存先
+  spriteData.img.pipe(gulp.dest('tiny/')); //imgName??��??�?????????��???????��????��?????�?�????
+  spriteData.css.pipe(gulp.dest('sass/')); //cssName??��??�???????css???�?�????
 });
 
 
@@ -71,6 +72,10 @@ gulp.task('bs-reload', function(){
 });
 
 
+// styleguide
+gulp.task('start-styleguide', function(){
+  styleguide.startServer();
+});
 // watch
 gulp.task('watch', function(){
   gulp.watch('sass/**/*.scss', ['sass']);
