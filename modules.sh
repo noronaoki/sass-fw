@@ -1,14 +1,16 @@
 #!/bin/sh
 
-npm install -g gulp
-npm install --save-dev gulp
-npm install --save-dev gulp-pleeease
-npm install --save-dev gulp-ruby-sass
-npm install --save-dev gulp-plumber
-npm install --save-dev gulp-tinypng
-npm install --save-dev gulp-styledocco
-npm install --save-dev gulp.spritesmith
-npm install --save-dev browser-sync
-npm install --save-dev gulp-sourcemaps
-npm install --save-dev gulp-if
-npm install --save-dev gulp-footer
+npm install gulp -g
+npm install devbridge-styleguide -g
+npm install live-server -g
+npm install gulp --save-dev
+npm install gulp-pleeease --save-dev
+npm install gulp-ruby-sass --save-dev
+npm install gulp-plumber --save-dev
+npm install gulp-tinypng --save-dev
+npm install gulp.spritesmith --save-dev
+# npm install --save-dev browser-sync
+npm install gulp-sourcemaps --save-dev
+# npm install --save-dev gulp-if
+# npm install --save-dev gulp-footer
+npm install devbridge-styleguide --save-dev

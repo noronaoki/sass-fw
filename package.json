@@ -14,12 +14,13 @@
     "gulp": "^3.9.1",
     "gulp-footer": "^1.0.5",
     "gulp-if": "^2.0.1",
+    "gulp-live-server": "0.0.29",
     "gulp-pleeease": "^2.0.2",
     "gulp-plumber": "^1.1.0",
     "gulp-ruby-sass": "^2.0.6",
     "gulp-sourcemaps": "^1.6.0",
     "gulp-styledocco": "0.0.3",
-    "gulp-tinypng": "^1.0.2",
+    "gulp-tinypng-compress": "^1.2.1",
     "gulp.spritesmith": "^6.2.1"
   }
 }

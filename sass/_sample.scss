@@ -1,11 +1,18 @@
 @charset "UTF-8";
 
+//-- typo:start --//
+$font-proxima: 'Proxima Nova', helvetica, sans-serif; // 300, 700
+$font-proxima-alternative: 'Neue Helvetica W01', helvetica, sans-serif; // 400, 400 italic
+$font-newsgothic: 'News Gothic Std', helvetica, sans-serif; // 700
+//-- typo:end --//
+
 body{
   @include font-family();
   @include font-size(40);
   font-feature-settings:"liga" 1;
   text-rendering:optimizeLegibility;
   -webkit-font-smoothing: antialiased;
+  color: red;
 }
 .btn{
   display: block;
@@ -23,10 +30,10 @@ body{
 }
 .icon{
   @include min-screen(1000){
-    @include sprite($sprite-kuma);
+    @include sprite($sprite-free-illust35785);
   }
   @include iphone5{
-    @include sprite-retina($sprite-comments4);
+    @include sprite-retina($sprite-200910292259590f7);
   }
 }
 .grade{
@@ -225,9 +232,9 @@ browser-syncでmedia query
 
 # ボタンの用例
 ## MarkDownで書けるスタイルガイド
-行頭に何も付けなければ段落  
-改行は文末にスペース2つ  
-アンダースコア2つで挟めば__ボールド__  
+行頭に何も付けなければ段落
+改行は文末にスペース2つ
+アンダースコア2つで挟めば__ボールド__
 アスタリスク2つでも**OK**
 
 ```
@@ -249,5 +256,3 @@ browser-syncでmedia query
 ```
 
 */
-
-

@@ -11,88 +11,33 @@ $icon-home: x y offset_x offset_y width height total_width total_height image_pa
 At the bottom of this section, we provide information about the spritesheet itself
 $spritesheet: width height image $spritesheet-sprites;
 */
-$sprite-8tnu010000b1z9f1-name: 'sprite-8tnu010000b1z9f1';
-$sprite-8tnu010000b1z9f1-x: 512px;
-$sprite-8tnu010000b1z9f1-y: 0px;
-$sprite-8tnu010000b1z9f1-offset-x: -512px;
-$sprite-8tnu010000b1z9f1-offset-y: 0px;
-$sprite-8tnu010000b1z9f1-width: 640px;
-$sprite-8tnu010000b1z9f1-height: 360px;
-$sprite-8tnu010000b1z9f1-total-width: 1664px;
-$sprite-8tnu010000b1z9f1-total-height: 1378px;
-$sprite-8tnu010000b1z9f1-image: '#{$img-path}/sprite.png';
-$sprite-8tnu010000b1z9f1: (512px, 0px, -512px, 0px, 640px, 360px, 1664px, 1378px, '#{$img-path}/sprite.png', 'sprite-8tnu010000b1z9f1', );
-$sprite-comments2-name: 'sprite-comments2';
-$sprite-comments2-x: 0px;
-$sprite-comments2-y: 0px;
-$sprite-comments2-offset-x: 0px;
-$sprite-comments2-offset-y: 0px;
-$sprite-comments2-width: 512px;
-$sprite-comments2-height: 465px;
-$sprite-comments2-total-width: 1664px;
-$sprite-comments2-total-height: 1378px;
-$sprite-comments2-image: '#{$img-path}/sprite.png';
-$sprite-comments2: (0px, 0px, 0px, 0px, 512px, 465px, 1664px, 1378px, '#{$img-path}/sprite.png', 'sprite-comments2', );
-$sprite-comments3-name: 'sprite-comments3';
-$sprite-comments3-x: 0px;
-$sprite-comments3-y: 465px;
-$sprite-comments3-offset-x: 0px;
-$sprite-comments3-offset-y: -465px;
-$sprite-comments3-width: 512px;
-$sprite-comments3-height: 403px;
-$sprite-comments3-total-width: 1664px;
-$sprite-comments3-total-height: 1378px;
-$sprite-comments3-image: '#{$img-path}/sprite.png';
-$sprite-comments3: (0px, 465px, 0px, -465px, 512px, 403px, 1664px, 1378px, '#{$img-path}/sprite.png', 'sprite-comments3', );
-$sprite-comments4-name: 'sprite-comments4';
-$sprite-comments4-x: 1152px;
-$sprite-comments4-y: 0px;
-$sprite-comments4-offset-x: -1152px;
-$sprite-comments4-offset-y: 0px;
-$sprite-comments4-width: 512px;
-$sprite-comments4-height: 339px;
-$sprite-comments4-total-width: 1664px;
-$sprite-comments4-total-height: 1378px;
-$sprite-comments4-image: '#{$img-path}/sprite.png';
-$sprite-comments4: (1152px, 0px, -1152px, 0px, 512px, 339px, 1664px, 1378px, '#{$img-path}/sprite.png', 'sprite-comments4', );
-$sprite-comments5-name: 'sprite-comments5';
-$sprite-comments5-x: 512px;
-$sprite-comments5-y: 465px;
-$sprite-comments5-offset-x: -512px;
-$sprite-comments5-offset-y: -465px;
-$sprite-comments5-width: 512px;
-$sprite-comments5-height: 363px;
-$sprite-comments5-total-width: 1664px;
-$sprite-comments5-total-height: 1378px;
-$sprite-comments5-image: '#{$img-path}/sprite.png';
-$sprite-comments5: (512px, 465px, -512px, -465px, 512px, 363px, 1664px, 1378px, '#{$img-path}/sprite.png', 'sprite-comments5', );
-$sprite-gulp-2x-name: 'sprite-gulp-2x';
-$sprite-gulp-2x-x: 0px;
-$sprite-gulp-2x-y: 868px;
-$sprite-gulp-2x-offset-x: 0px;
-$sprite-gulp-2x-offset-y: -868px;
-$sprite-gulp-2x-width: 228px;
-$sprite-gulp-2x-height: 510px;
-$sprite-gulp-2x-total-width: 1664px;
-$sprite-gulp-2x-total-height: 1378px;
-$sprite-gulp-2x-image: '#{$img-path}/sprite.png';
-$sprite-gulp-2x: (0px, 868px, 0px, -868px, 228px, 510px, 1664px, 1378px, '#{$img-path}/sprite.png', 'sprite-gulp-2x', );
-$sprite-kuma-name: 'sprite-kuma';
-$sprite-kuma-x: 1152px;
-$sprite-kuma-y: 339px;
-$sprite-kuma-offset-x: -1152px;
-$sprite-kuma-offset-y: -339px;
-$sprite-kuma-width: 372px;
-$sprite-kuma-height: 384px;
-$sprite-kuma-total-width: 1664px;
-$sprite-kuma-total-height: 1378px;
-$sprite-kuma-image: '#{$img-path}/sprite.png';
-$sprite-kuma: (1152px, 339px, -1152px, -339px, 372px, 384px, 1664px, 1378px, '#{$img-path}/sprite.png', 'sprite-kuma', );
-$spritesheet-width: 1664px;
-$spritesheet-height: 1378px;
+$sprite-200910292259590f7-name: 'sprite-200910292259590f7';
+$sprite-200910292259590f7-x: 0px;
+$sprite-200910292259590f7-y: 532px;
+$sprite-200910292259590f7-offset-x: 0px;
+$sprite-200910292259590f7-offset-y: -532px;
+$sprite-200910292259590f7-width: 310px;
+$sprite-200910292259590f7-height: 360px;
+$sprite-200910292259590f7-total-width: 1000px;
+$sprite-200910292259590f7-total-height: 892px;
+$sprite-200910292259590f7-image: '#{$img-path}/sprite.png';
+$sprite-200910292259590f7: (0px, 532px, 0px, -532px, 310px, 360px, 1000px, 892px, '#{$img-path}/sprite.png', 'sprite-200910292259590f7', );
+$sprite-free-illust35785-name: 'sprite-free-illust35785';
+$sprite-free-illust35785-x: 0px;
+$sprite-free-illust35785-y: 0px;
+$sprite-free-illust35785-offset-x: 0px;
+$sprite-free-illust35785-offset-y: 0px;
+$sprite-free-illust35785-width: 1000px;
+$sprite-free-illust35785-height: 532px;
+$sprite-free-illust35785-total-width: 1000px;
+$sprite-free-illust35785-total-height: 892px;
+$sprite-free-illust35785-image: '#{$img-path}/sprite.png';
+$sprite-free-illust35785: (0px, 0px, 0px, 0px, 1000px, 532px, 1000px, 892px, '#{$img-path}/sprite.png', 'sprite-free-illust35785', );
+$spritesheet-width: 1000px;
+$spritesheet-height: 892px;
 $spritesheet-image: '#{$img-path}/sprite.png';
-$spritesheet-sprites: ($sprite-8tnu010000b1z9f1, $sprite-comments2, $sprite-comments3, $sprite-comments4, $sprite-comments5, $sprite-gulp-2x, $sprite-kuma, );
-$spritesheet: (1664px, 1378px, '#{$img-path}/sprite.png', $spritesheet-sprites, );
+$spritesheet-sprites: ($sprite-200910292259590f7, $sprite-free-illust35785, );
+$spritesheet: (1000px, 892px, '#{$img-path}/sprite.png', $spritesheet-sprites, );
 
 /*
 The provided mixins are intended to be used with the array-like variables
@@ -104,6 +49,21 @@ The provided mixins are intended to be used with the array-like variables
 .icon-email {
   @include sprite($icon-email);
 }
+
+Example usage in HTML:
+
+`display: block` sprite:
+<div class="icon-home"></div>
+
+To change `display` (e.g. `display: inline-block;`), we suggest using a common CSS class:
+
+// CSS
+.icon {
+  display: inline-block;
+}
+
+// HTML
+<i class="icon icon-home"></i>
 */
 @mixin sprite-width($sprite) {
   width: nth($sprite, 5);
