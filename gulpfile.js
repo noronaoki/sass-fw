@@ -5,9 +5,9 @@ var gulp        = require('gulp'),
     spritesmith = require('gulp.spritesmith'),
     pleeease    = require('gulp-pleeease'),
     tinypng     = require('gulp-tinypng-compress'),
-    gif         = require('gulp-if'),
-    footer      = require('gulp-footer'),
-    styleguide  = require('devbridge-styleguide'),
+    // gif         = require('gulp-if'),
+    // footer      = require('gulp-footer'),
+    // styleguide  = require('devbridge-styleguide'),
     browserSync = require('browser-sync');
     // gls         = require("gulp-live-server");
 
