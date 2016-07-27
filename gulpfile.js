@@ -5,9 +5,7 @@ var gulp        = require('gulp'),
     spritesmith = require('gulp.spritesmith'),
     pleeease    = require('gulp-pleeease'),
     tinypng     = require('gulp-tinypng-compress'),
-    gif         = require('gulp-if'),
-    footer      = require('gulp-footer'),
-    styleguide  = require('devbridge-styleguide'),
+    // styleguide  = require('devbridge-styleguide'),
     browserSync = require('browser-sync');
     // gls         = require("gulp-live-server");
 
@@ -60,7 +58,7 @@ gulp.task('tinypng', function () {
 });
 
 
-// // browserSync
+// browserSync
 gulp.task('browser-sync', function(){
   browserSync({
     server: {
@@ -108,7 +106,7 @@ gulp.task('bs-reload', function(){
 gulp.task('watch', function(){
   gulp.watch('sass/**/*.scss', ['sass']);
   gulp.watch('assets/img/sprite/*.png', ['sprite']);
-  gulp.watch(['./*.html', 'assets/css/**/*.css'], ['bs-reload']);
+  gulp.watch(['./**/*.html', 'assets/css/**/*.css'], ['bs-reload']);
   // gulp.watch('start-styleguide');
 });
 
