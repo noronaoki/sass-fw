@@ -5,7 +5,7 @@ var gulp        = require('gulp'),
     spritesmith = require('gulp.spritesmith'),
     pleeease    = require('gulp-pleeease'),
     tinypng     = require('gulp-tinypng-compress'),
-    // styleguide  = require('devbridge-styleguide'),
+    styleguide  = require('devbridge-styleguide'),
     browserSync = require('browser-sync');
     // gls         = require("gulp-live-server");
 
