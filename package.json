@@ -14,7 +14,7 @@
     "gulp": "^3.9.1",
     "gulp-footer": "^1.0.5",
     "gulp-if": "^2.0.1",
-    "gulp-live-server": "0.0.29",
+    "gulp-live-server": "0.0.30",
     "gulp-pleeease": "^2.0.2",
     "gulp-plumber": "^1.1.0",
     "gulp-ruby-sass": "^2.0.6",

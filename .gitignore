@@ -1,7 +1,7 @@
 .sass-cache
 .gulp
+.DS_Store
+package.json
 node_modules
 assets/css/
 styleguide
-tiny/sprite.png
-package.json

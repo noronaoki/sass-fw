@@ -8,8 +8,8 @@ var gulp        = require('gulp'),
     gif         = require('gulp-if'),
     footer      = require('gulp-footer'),
     styleguide  = require('devbridge-styleguide'),
-    // browserSync = require('browser-sync');
-    gls         = require("gulp-live-server");
+    browserSync = require('browser-sync');
+    // gls         = require("gulp-live-server");
 
 
 // sass,pleeease
@@ -51,7 +51,7 @@ gulp.task('sprite', function () {
 
 // tiny png
 gulp.task('tinypng', function () {
-  gulp.src('assets/img/**/*.{png, jpg, jpeg}')
+  gulp.src('assets/img/*.{png, jpg, jpeg}')
     .pipe(tinypng({
       key: 'pDRurCCYmFqEjjA6qfXk85_CbkKG-POI',
       log: true
@@ -61,56 +61,57 @@ gulp.task('tinypng', function () {
 
 
 // // browserSync
-// gulp.task('browser-sync', function(){
-//   browserSync({
-//     server: {
-//       baseDir: './'
-//     }
-//   });
-// });
-//
-//
-// // bs-reload
-// gulp.task('bs-reload', function(){
-//   browserSync.reload();
-// });
+gulp.task('browser-sync', function(){
+  browserSync({
+    server: {
+      baseDir: './',
+      directory: true
+    }
+  });
+});
+
+
+// bs-reload
+gulp.task('bs-reload', function(){
+  browserSync.reload();
+});
 
 
 // live-server
-gulp.task('serve', function() {
-  //1. serve with default settings
-  var server = gls.static('/', 3000); //equals to gls.static('public', 3000);
-  server.start();
-  //
-  // //2. serve at custom port
-  // var server = gls.static('dist', 8888);
-  // server.start();
-  //
-  // //3. serve multi folders
-  // var server = gls.static(['dist', '.tmp']);
-  // server.start();
-  //
-  // //use gulp.watch to trigger server actions(notify, start or stop)
-  // gulp.watch(['static/**/*.css', 'static/**/*.html'], function (file) {
-  //   server.notify.apply(server, [file]);
-  // });
-});
+// gulp.task('serve', function() {
+//   //1. serve with default settings
+//   var server = gls.static('/', 3000); //equals to gls.static('public', 3000);
+//   server.start();
+//   //
+//   // //2. serve at custom port
+//   // var server = gls.static('dist', 8888);
+//   // server.start();
+//   //
+//   // //3. serve multi folders
+//   // var server = gls.static(['dist', '.tmp']);
+//   // server.start();
+//   //
+//   // //use gulp.watch to trigger server actions(notify, start or stop)
+//   // gulp.watch(['static/**/*.css', 'static/**/*.html'], function (file) {
+//   //   server.notify.apply(server, [file]);
+//   // });
+// });
 
 
 // styleguide
-gulp.task('styleguide', function(){
-  styleguide.startServer();
-});
+// gulp.task('styleguide', function(){
+//   styleguide.startServer();
+// });
 
 
 // watch
 gulp.task('watch', function(){
   gulp.watch('sass/**/*.scss', ['sass']);
   gulp.watch('assets/img/sprite/*.png', ['sprite']);
-  // gulp.watch(['./*.html', 'assets/css/**/*.css'], ['bs-reload']);
+  gulp.watch(['./*.html', 'assets/css/**/*.css'], ['bs-reload']);
   // gulp.watch('start-styleguide');
 });
 
 
 // default
-gulp.task('default', ['sass', 'sprite', 'tinypng', 'serve', 'watch']);
+gulp.task('default', ['sass', 'sprite', 'browser-sync', 'watch']);

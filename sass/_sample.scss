@@ -199,13 +199,13 @@ autoprefixer
 
 /*
 sprite
-*/
-.icon{
-  @include sprite($sprite-kuma);
-  @include iphone5{
-    @include sprite-retina($sprite-kuma);
-  }
-}
+// */
+// .icon{
+//   @include sprite($sprite-kuma);
+//   @include iphone5{
+//     @include sprite-retina($sprite-kuma);
+//   }
+// }
 
 
 /*
@@ -228,31 +228,17 @@ browser-syncでmedia query
 .block3{width: 200px; height: 500px; background-color: pink;}
 .block4{width: 200px; height: 500px; background-color: green;}
 
-/*
+%clearfix {
+  &::after {
+    content: "";
+    display: block;
+    clear: both;
+  }
+}
 
-# ボタンの用例
-## MarkDownで書けるスタイルガイド
-行頭に何も付けなければ段落
-改行は文末にスペース2つ
-アンダースコア2つで挟めば__ボールド__
-アスタリスク2つでも**OK**
-
-```
-<div class="default-btn">デフォルトボタン</div>
-```
-### これは通常
-```
-<div class="submit-btn">サブミットボタン</div>
-```
-```
-<div class="cancel-btn">キャンセルボタン</div>
-```
-### これはHover
-```
-<div class="submit-btn :hover">サブミットボタン</div>
-```
-```
-<div class="cancel-btn :hover">キャンセルボタン</div>
-```
-
-*/
+.box {
+    @extend %clearfix;
+    &::after {
+        display: table;
+    }
+}
