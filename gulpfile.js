@@ -97,9 +97,9 @@ gulp.task('bs-reload', function(){
 
 
 // styleguide
-// gulp.task('styleguide', function(){
-//   styleguide.startServer();
-// });
+gulp.task('styleguide', function(){
+  styleguide.startServer();
+});
 
 
 // watch
