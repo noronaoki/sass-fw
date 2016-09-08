@@ -90,4 +90,4 @@ gulp.task('watch', function(){
 
 
 // default
-gulp.task('default', ['sass', 'styleguide', 'sprite', 'browser-sync', 'watch']);
+gulp.task('default', ['sass', 'sprite', 'browser-sync', 'styleguide', 'watch']);
