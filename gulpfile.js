@@ -5,9 +5,8 @@ var gulp        = require('gulp'),
     spritesmith = require('gulp.spritesmith'),
     pleeease    = require('gulp-pleeease'),
     tinypng     = require('gulp-tinypng-compress'),
-    // styleguide  = require('devbridge-styleguide'),
+    styleguide  = require('devbridge-styleguide'),
     browserSync = require('browser-sync');
-    // gls         = require("gulp-live-server");
 
 
 // sass,pleeease
@@ -75,31 +74,10 @@ gulp.task('bs-reload', function(){
 });
 
 
-// live-server
-// gulp.task('serve', function() {
-//   //1. serve with default settings
-//   var server = gls.static('/', 3000); //equals to gls.static('public', 3000);
-//   server.start();
-//   //
-//   // //2. serve at custom port
-//   // var server = gls.static('dist', 8888);
-//   // server.start();
-//   //
-//   // //3. serve multi folders
-//   // var server = gls.static(['dist', '.tmp']);
-//   // server.start();
-//   //
-//   // //use gulp.watch to trigger server actions(notify, start or stop)
-//   // gulp.watch(['static/**/*.css', 'static/**/*.html'], function (file) {
-//   //   server.notify.apply(server, [file]);
-//   // });
-// });
-
-
 // styleguide
-// gulp.task('styleguide', function(){
-//   styleguide.startServer();
-// });
+gulp.task('styleguide', function(){
+  styleguide.startServer();
+});
 
 
 // watch
@@ -107,9 +85,9 @@ gulp.task('watch', function(){
   gulp.watch('sass/**/*.scss', ['sass']);
   gulp.watch('assets/img/sprite/*.png', ['sprite']);
   gulp.watch(['./**/*.html', 'assets/css/**/*.css'], ['bs-reload']);
-  // gulp.watch('start-styleguide');
+  gulp.watch('styleguide');
 });
 
 
 // default
-gulp.task('default', ['sass', 'sprite', 'browser-sync', 'watch']);
+gulp.task('default', ['sass', 'styleguide', 'sprite', 'browser-sync', 'watch']);

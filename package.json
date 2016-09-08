@@ -10,7 +10,7 @@
   "license": "ISC",
   "devDependencies": {
     "browser-sync": "^2.12.8",
-    "devbridge-styleguide": "^0.4.9",
+    "devbridge-styleguide": "^0.4.17",
     "gulp": "^3.9.1",
     "gulp-footer": "^1.0.5",
     "gulp-if": "^2.0.1",
