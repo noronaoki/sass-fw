@@ -10,9 +10,9 @@
     1024,
     1200
   ],
-  "serverPort": 3000,
+  "serverPort": 8888,
   "snippetTemplate": "styleguide/template.html",
-  "sassVariables": ["../sass/_sample.scss"],
+  "sassVariables": ["./sass/_config.scss"],
   "maxSassIterations": 2000,
   "database": "styleguide/db",
   "categories": "styleguide/db/categories.txt",
