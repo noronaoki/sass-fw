@@ -1,7 +1,23 @@
 [
   {
     "name": "theme",
-    "colors": {},
+    "colors": {
+      "#000000": [
+        "$color-black"
+      ],
+      "#d26262": [
+        "$color-lighter-2"
+      ],
+      "#f6f6f6": [
+        "$white"
+      ],
+      "#141823": [
+        "$color-dark"
+      ],
+      "#ff0000": [
+        "$red"
+      ]
+    },
     "typography": [
       {
         "variable": "$font-proxima",
@@ -18,23 +34,69 @@
         ]
       },
       {
-        "variable": "$font-proxima-alternative",
-        "value": "'Neue Helvetica W01', helvetica, sans-serif",
+        "variable": "$list-gothic",
+        "value": "Verdana, \"游ゴシック\", YuGothic, \"Hiragino Kaku Gothic ProN\", Meiryo, sans-serif",
         "weights": [
           {
-            "weight": 400,
+            "weight": 300,
             "italic": false
           },
           {
-            "weight": 400,
-            "italic": true
+            "weight": 700,
+            "italic": false
           }
         ]
       },
       {
-        "variable": "$font-newsgothic",
-        "value": "'News Gothic Std', helvetica, sans-serif",
+        "variable": "$list-serif",
+        "value": "\"Times New Roman\", \"游明朝\", YuMincho, \"Hiragino Mincho ProN\", Meiryo, serif",
         "weights": [
+          {
+            "weight": 300,
+            "italic": false
+          },
+          {
+            "weight": 700,
+            "italic": false
+          }
+        ]
+      },
+      {
+        "variable": "$list-prop",
+        "value": "Osaka-mono, \"MS Gothic\", monospace",
+        "weights": [
+          {
+            "weight": 300,
+            "italic": false
+          },
+          {
+            "weight": 700,
+            "italic": false
+          }
+        ]
+      },
+      {
+        "variable": "$list-mac",
+        "value": "Helvetica, \"Hiragino Kaku Gothic ProN\", Meiryo, fantasy",
+        "weights": [
+          {
+            "weight": 300,
+            "italic": false
+          },
+          {
+            "weight": 700,
+            "italic": false
+          }
+        ]
+      },
+      {
+        "variable": "$list-default",
+        "value": "Meiryo, 'MS PGothic', sans-serif",
+        "weights": [
+          {
+            "weight": 300,
+            "italic": false
+          },
           {
             "weight": 700,
             "italic": false

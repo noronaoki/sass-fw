@@ -85,9 +85,8 @@ gulp.task('watch', function(){
   gulp.watch('sass/**/*.scss', ['sass']);
   gulp.watch('assets/img/sprite/*.png', ['sprite']);
   gulp.watch(['./**/*.html', 'assets/css/**/*.css'], ['bs-reload']);
-  gulp.watch('styleguide');
 });
 
 
 // default
-gulp.task('default', ['sass', 'sprite', 'browser-sync', 'styleguide', 'watch']);
+gulp.task('default', ['sass', 'sprite', 'browser-sync', 'watch']);

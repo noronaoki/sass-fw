@@ -1,0 +1,32 @@
+[
+  {
+    "id": 1,
+    "name": "button",
+    "code": "<a class=\"btn\" href=\"#\">aaa</a>",
+    "description": "",
+    "inlineCss": "",
+    "includeJs": "false",
+    "isEdited": true,
+    "isDeleted": true
+  },
+  {
+    "id": 2,
+    "name": "ボタン",
+    "code": "<a href=\"#\" class=\"btn\">aaaaaaa</a>",
+    "description": "",
+    "inlineCss": "#snippet { \n  \n}",
+    "includeJs": "false",
+    "isEdited": true,
+    "isDeleted": true
+  },
+  {
+    "id": 3,
+    "name": "title",
+    "code": "<h1>title</h1>",
+    "description": "",
+    "inlineCss": "#snippet { \n  \n}",
+    "includeJs": "false",
+    "isEdited": false,
+    "isDeleted": false
+  }
+]

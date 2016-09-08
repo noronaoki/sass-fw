@@ -1,11 +1,25 @@
 @charset "UTF-8";
 
+
 //-- typo:start --//
 $font-proxima: 'Proxima Nova', helvetica, sans-serif; // 300, 700
-$font-proxima-alternative: 'Neue Helvetica W01', helvetica, sans-serif; // 400, 400 italic
-$font-newsgothic: 'News Gothic Std', helvetica, sans-serif; // 700
+$list-gothic: Verdana, "游ゴシック", YuGothic, "Hiragino Kaku Gothic ProN", Meiryo, sans-serif; // 300, 700
+$list-serif: "Times New Roman", "游明朝", YuMincho, "Hiragino Mincho ProN", Meiryo, serif; // 300, 700
+$list-prop: Osaka-mono, "MS Gothic", monospace; // 300, 700
+$list-mac: Helvetica, "Hiragino Kaku Gothic ProN", Meiryo, fantasy; // 300, 700
+$list-default: Meiryo, 'MS PGothic', sans-serif; // 300, 700
 //-- typo:end --//
+//-- colors:start --//
+$color-black: #000000;
+$color-dark: #141823;
+$color-lighter-2: #d26262;
+$red: #ff0000;
+$white: #f6f6f6;
+//-- colors:end --//
 
+h1{
+  color: green;
+}
 body{
   @include font-family();
   @include font-size(40);
@@ -28,14 +42,14 @@ body{
     background-color: rgba($red, 0.8);
   }
 }
-.icon{
-  @include min-screen(1000){
-    @include sprite($sprite-free-illust35785);
-  }
-  @include iphone5{
-    @include sprite-retina($sprite-200910292259590f7);
-  }
-}
+// .icon{
+//   @include min-screen(1000){
+//     @include sprite($sprite-free-illust35785);
+//   }
+//   @include iphone5{
+//     @include sprite-retina($sprite-200910292259590f7);
+//   }
+// }
 .grade{
   background: linear-gradient(#a0c4c2, #b5e3de);
 }
