@@ -1,5 +1,5 @@
 {
-  "projectName": "aaaaaa",
+  "projectName": "",
   "projectUrl": "",
   "projectLogo": "",
   "jsResources": [],
@@ -10,7 +10,7 @@
     1024,
     1200
   ],
-  "serverPort": 8888,
+  "serverPort": 8889,
   "snippetTemplate": "styleguide/template.html",
   "sassVariables": ["./sass/_config.scss"],
   "maxSassIterations": 2000,

@@ -221,7 +221,7 @@ var viewService = (function ($, editorService, sassService, categoryService, sni
         $.getJSON('./config.txt', function (data) {
             $.each(data.viewportWidths, function (index, value) {
                 if (firstValue === false) {
-                    firstValue = value;
+                    firstValue = data.viewportWidths[data.viewportWidths.length - 1];
                 }
                 tempLi = $('<li></li>');
                 tempButton = $('<button type="button" data-size="' + value + '">' + value + ' px</button>');
@@ -238,7 +238,7 @@ var viewService = (function ($, editorService, sassService, categoryService, sni
                 firstValue = parseFloat(mediaCookie);
             }
             if(firstValue < 320 || firstValue === "" || isNaN(firstValue)) {
-                firstValue = 320;
+                firstValue = 1200;
             }
             if (firstValue + 100 + 20 > windowWidth) {
                 firstValue = windowWidth - 100 - 20;
@@ -395,7 +395,7 @@ var viewService = (function ($, editorService, sassService, categoryService, sni
             var categoryLine = $('<li class="sg-category-line" data-category-id="' + id +'"></li>'),
 
                 categoryInputWrapper = $('<div class="sg-field-wrapper"></div>'),
-                categoryName = $('<input class="sg-category-name" type="text" value="' + name + '" readonly>'),
+                categoryName = $('<input placeholder="Category Name" class="sg-category-name" type="text" value="' + name + '" readonly>'),
 
                 categoryControls = $('<div class="sg-category-controls sg-opened"></div>'),
                 categoryControlsInner = $('<div class="sg-category-controls-inner"></div>'),
@@ -548,7 +548,7 @@ var viewService = (function ($, editorService, sassService, categoryService, sni
                 modalContent = $("<div></div>");
 
                 categoryAddButton.on('click', function () {
-                    categoriesList.append(categoryMarkup('new category', undefined, true));
+                    categoriesList.append(categoryMarkup('', undefined, true));
                 });
 
                 $.each(categories, function (index, value) {
@@ -579,10 +579,13 @@ var viewService = (function ($, editorService, sassService, categoryService, sni
         snippetService.init(function (data) {
             if (typeof data === 'string') {
                 isServerOn = false;
-                console.log(data); //server is down
+                console.log(data); // server is down
             } else {
                 isServerOn = true;
+                console.log('EDIT MODE - Server is running'); // server is running
+
                 $('html').addClass('server-on');
+
                 //commented these, these will be improved and enabled after initial release
                 //$('.js-scrape-snipp').on('click', $.proxy(snippetActions.scrapeHandler, null, 'snippets'));
                 $(document).on('click', '.js-scrape-sass', $.proxy(snippetActions.scrapeHandler, null, 'sass'));
