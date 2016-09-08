@@ -1,58 +1,7 @@
 @charset "UTF-8";
 
-//*************************************
-//
-// サポートブラウザ
-//
-//*************************************
-
-$support-ie6     :false;
-$support-ie7     :false;
-$support-ie8     :false;
-$support-ie9     :false;
-$support-ie10    :false;
-$support-mozilla :true;
-$support-webkit  :true;
-$support-opera   :false;
-
-
-//*************************************
-//
-// ベンダープリフィックスの使用フラグ
-//
-//*************************************
-$prefix-webkit  :true;
-$prefix-moz     :true;
-$prefix-ms      :true;
-$prefix-o       :false;
-$prefix-default :true;
-
-
-//*************************************
-//
-// ファイルパス
-//
-//*************************************
-$img-path   :"../assets/img";
-$font-path  :"../font";
-
-
-//*************************************
-//
-// フォント定義
-//
-//*************************************
-$gothic :false;
-$serif  :false;
-$prop   :false;
-$mac    :true;
-
-
-//*************************************
-//
-// 色定義
-//
-//*************************************
-$black  :#000;
-$white  :#fff;
-$red    :#f00;
+//-- colors:start --//
+$color-black: #000000;
+$color-dark: #141823;
+$red-lighter: #d26262;
+//-- colors:end --//
