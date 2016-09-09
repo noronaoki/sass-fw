@@ -1,0 +1,22 @@
+[
+  {
+    "id": 4,
+    "name": "ボタン",
+    "code": "<a href=\"#\" class=\"default-btn\">Basic</a>\n<a href=\"#\" class=\"submit-btn\">Submit</a>\n<a href=\"#\" class=\"cancel-btn\">Submit</a>",
+    "description": "",
+    "inlineCss": "#snippet { \n  \n}",
+    "includeJs": "false",
+    "isEdited": true,
+    "isDeleted": false
+  },
+  {
+    "id": 5,
+    "name": "アイコン",
+    "code": "<p class=\"icon\"></p>",
+    "description": "",
+    "inlineCss": "#snippet { \n  \n}",
+    "includeJs": "false",
+    "isEdited": true,
+    "isDeleted": false
+  }
+]

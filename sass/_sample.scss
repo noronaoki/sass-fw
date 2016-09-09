@@ -1,24 +1,7 @@
 @charset "UTF-8";
 
-
-//-- typo:start --//
-$font-proxima: 'Proxima Nova', helvetica, sans-serif; // 300, 700
-$list-gothic: Verdana, "游ゴシック", YuGothic, "Hiragino Kaku Gothic ProN", Meiryo, sans-serif; // 300, 700
-$list-serif: "Times New Roman", "游明朝", YuMincho, "Hiragino Mincho ProN", Meiryo, serif; // 300, 700
-$list-prop: Osaka-mono, "MS Gothic", monospace; // 300, 700
-$list-mac: Helvetica, "Hiragino Kaku Gothic ProN", Meiryo, fantasy; // 300, 700
-$list-default: Meiryo, 'MS PGothic', sans-serif; // 300, 700
-//-- typo:end --//
-//-- colors:start --//
-$color-black: #000000;
-$color-dark: #141823;
-$color-lighter-2: #d26262;
-$red: #ff0000;
-$white: #f6f6f6;
-//-- colors:end --//
-
 h1{
-  color: green;
+  color: brown;
 }
 body{
   @include font-family();
@@ -26,113 +9,18 @@ body{
   font-feature-settings:"liga" 1;
   text-rendering:optimizeLegibility;
   -webkit-font-smoothing: antialiased;
-  color: red;
 }
-.btn{
-  display: block;
-  width: 100px;
-  height: 50px;
-  background-color: $red;
-  color: $white;
-  border-radius: 8px;
-  @include font-size(20);
-  text-align: center;
-  line-height: 50px;
-  &:hover{
-    background-color: rgba($red, 0.8);
-  }
-}
-// .icon{
-//   @include min-screen(1000){
-//     @include sprite($sprite-free-illust35785);
-//   }
-//   @include iphone5{
-//     @include sprite-retina($sprite-200910292259590f7);
-//   }
-// }
-.grade{
-  background: linear-gradient(#a0c4c2, #b5e3de);
-}
-
-
-
-/*
-
-
-
-# ボタンの例
-
-```
-<a class="btn" href="#">ボタン</a>
-```
-
-
-
-# 可変長引数の例
-```
-@mixin borders($val...){
-  border: $val;
-}
-```
-```
-.box{
-  @include borders(1px solid #ccc);
-}
-```
-
-
-# sprite
 
 .icon{
-  @include sprite($sprite-kuma);
-  @include sp{
-    @include sprite-retina($sprite-comments2);
+  @include min-screen(1000){
+    @include sprite($sprite-free-illust35785);
+  }
+  @include iphone5{
+    @include sprite-retina($sprite-200910292259590f7);
   }
 }
 
-```
-<div class="icon">icon123456789</div>
-```
 
-
-*/
-
-
-
-
-
-
-
-
-
-
-// 多次元配列
-$spacer:(
-  mt:margin-top,
-  mr:margin-right,
-  mb:margin-bottom,
-  ml:margin-left,
-  pt:padding-top,
-  pr:padding-right,
-  pb:padding-bottom,
-  pl:padding-left
-);
-
-@each $key,$value in $spacer{
-  $i:0;
-  @while $i <= 30{
-    .#{$key}#{$i}{
-      #{$value}:#{$i}px;
-    }
-    $i:$i + 10;
-  }
-}
-
-@each $key,$value in $spacer{
-    @for $i from 0 through 10{
-      .#{$key}#{$i}{#{$value}:#{$i}px};
-    }
-  }
 
 
 //*************************************
@@ -140,14 +28,6 @@ $spacer:(
 // 高度な使い方
 //
 //*************************************
-
-/*
-ベンダープリフィックスの例
-*/
-.prefix{
-  @include prefix-prop(box-sizing,border-box);
-  @include prefix-both(transition,transform 0.5s linear);
-}
 
 
 /*
@@ -191,68 +71,4 @@ $spacer:(
 
 .box{
   @include borders(1px solid #ccc);
-}
-
-
-
-
-//*************************************
-//
-// タスクランナー
-//
-//*************************************
-
-/*
-autoprefixer
-*/
-.autoprefixer{
-  display: flex;
-  background: linear-gradient(#fff, #000);
-}
-
-
-/*
-sprite
-// */
-// .icon{
-//   @include sprite($sprite-kuma);
-//   @include iphone5{
-//     @include sprite-retina($sprite-kuma);
-//   }
-// }
-
-
-/*
-browser-syncでmedia query
-*/
-@include min-screen(1000px){
-  h1::before{
-    content: "これはPCのブラウザです。";
-    @include font-size(30);
-  }
-}
-@include iphone5{
-  h1::before{
-    content: "こっちはiPhone5のブラウザです。";
-    @include font-size(100);
-  }
-}
-.block1{width: 200px; height: 500px; background-color: red;}
-.block2{width: 200px; height: 500px; background-color: blue;}
-.block3{width: 200px; height: 500px; background-color: pink;}
-.block4{width: 200px; height: 500px; background-color: green;}
-
-%clearfix {
-  &::after {
-    content: "";
-    display: block;
-    clear: both;
-  }
-}
-
-.box {
-    @extend %clearfix;
-    &::after {
-        display: table;
-    }
 }

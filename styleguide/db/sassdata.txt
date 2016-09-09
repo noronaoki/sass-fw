@@ -2,20 +2,14 @@
   {
     "name": "theme",
     "colors": {
-      "#000000": [
-        "$color-black"
+      "#000": [
+        "$black  "
       ],
-      "#d26262": [
-        "$color-lighter-2"
+      "#f00": [
+        "$red    "
       ],
-      "#f6f6f6": [
-        "$white"
-      ],
-      "#141823": [
-        "$color-dark"
-      ],
-      "#ff0000": [
-        "$red"
+      "#fff": [
+        "$white  "
       ]
     },
     "typography": [

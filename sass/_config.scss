@@ -33,7 +33,7 @@ $prefix-default :true;
 // ファイルパス
 //
 //*************************************
-$img-path   :"../assets/img";
+$img-path   :"../img";
 $font-path  :"../font";
 
 
@@ -46,13 +46,3 @@ $gothic :false;
 $serif  :false;
 $prop   :false;
 $mac    :true;
-
-
-//*************************************
-//
-// 色定義
-//
-//*************************************
-$black  :#000;
-$white  :#fff;
-$red    :#f00;
