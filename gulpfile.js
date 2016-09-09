@@ -63,7 +63,8 @@ gulp.task('browser-sync', function(){
     server: {
       baseDir: './',
       directory: true
-    }
+    },
+    port: 3001
   });
 });
 
