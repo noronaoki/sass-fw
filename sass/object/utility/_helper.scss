@@ -1,0 +1,74 @@
+@charset "UTF-8";
+//*************************************
+//
+// ヘルパー
+//
+//*************************************
+
+.caution {
+  color: $red;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.left {
+  float: left;
+}
+
+.right {
+  float: right;
+}
+
+.center {
+  text-align: center;
+}
+
+.hidden {
+  display: none;
+}
+
+.hide-image {
+  display: block;
+  text-indent: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  outline: none;
+}
+
+.clrfix {
+  @if $support-ie6 or $support-ie7 {
+    *zoom: 1;
+  }
+
+  &::after {
+    display: block;
+    content: "";
+    clear: both;
+  }
+}
+
+.ellipsis {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+
+// marginとかpaddingのやつ
+$spacer-list:(
+  mt:margin-top,
+  mr:margin-right,
+  mb:margin-bottom,
+  ml:margin-left,
+  pt:padding-top,
+  pr:padding-right,
+  pb:padding-bottom,
+  pl:padding-left
+  );
+  @each $key,$value in $spacer-list{
+    @for $i from 0 through 1{
+      .#{$key}#{$i}{#{$value}:#{$i}px};
+    }
+  }

@@ -14,8 +14,14 @@
 @import "foundation/reset";
 // HTML5系のタグをいい感じにするやつ
 @import "foundation/sanitize";
+// フォント定義
+@import "foundation/font";
 // 色、フォントなどの変数定義
-@import "foundation/variables";
+@import "foundation/variable";
+// Mixin
+@import "foundation/mixin";
+// Function
+@import "foundation/mixin";
 
 //*************************************
 //
@@ -25,22 +31,24 @@
 // コンテナなどの大きなブロック単位もここに指定。
 //
 //*************************************
-@import "media-queries";
+@import "layout/header";
 
 //*************************************
 //
 // Object
 //
 // ┣ component
-// ┣ project
-// ┗ utility
+// ┣ utility
+// ┗ project
 //
 //*************************************
+// component
 @import "object/component/foundation";
 @import "object/component/loading";
-@import "object/utility/module";
-
-@import "sprite";
-@import "sprite-retina";
-@import "mixins";
-@import "sample";
+// utility
+@import "object/utility/media-queries";
+@import "object/utility/helper";
+@import "object/utility/sprite";
+@import "object/utility/sprite-retina";
+// project
+@import "object/project/sample";

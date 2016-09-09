@@ -5,27 +5,15 @@
 // サポートブラウザ
 //
 //*************************************
-
-$support-ie6     :false;
-$support-ie7     :false;
-$support-ie8     :false;
-$support-ie9     :false;
-$support-ie10    :false;
-$support-mozilla :true;
-$support-webkit  :true;
-$support-opera   :false;
-
-
-//*************************************
-//
-// ベンダープリフィックスの使用フラグ
-//
-//*************************************
-$prefix-webkit  :true;
-$prefix-moz     :true;
-$prefix-ms      :true;
-$prefix-o       :false;
-$prefix-default :true;
+$support-ie6     : false;
+$support-ie7     : false;
+$support-ie8     : false;
+$support-ie9     : false;
+$support-ie10    : false;
+$support-ie11    : true;
+$support-mozilla : true;
+$support-webkit  : true;
+$support-opera   : false;
 
 
 //*************************************
@@ -33,16 +21,16 @@ $prefix-default :true;
 // ファイルパス
 //
 //*************************************
-$img-path   :"../img";
-$font-path  :"../font";
+$img-path   : "../img";
+$font-path  : "../font";
 
 
 //*************************************
 //
-// フォント定義
+// 使用フォント
 //
 //*************************************
-$gothic :false;
-$serif  :false;
-$prop   :false;
-$mac    :true;
+$gothic         :false;
+$serif          :false;
+$proportional   :false;
+$mac            :true;

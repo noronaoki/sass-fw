@@ -1,62 +1,61 @@
 @charset "UTF-8";
-
 //*************************************
 //
 // font-size
 //
 //*************************************
-
 @mixin font-size($size: 24, $base: 16) {
   font-size: $size + px;
   font-size: ($size / $base) * 1rem;
 }
-
-
 //*************************************
 //
 // font-family
 //
 //*************************************
-
-@mixin font-family($add:''){
+@mixin font-family($add:'') {
   $list-gothic: Verdana, "游ゴシック", YuGothic, "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
   $list-serif: "Times New Roman", "游明朝", YuMincho, "Hiragino Mincho ProN", Meiryo, serif;
-  $list-prop: Osaka-mono, "MS Gothic", monospace;
+  $list-proportional: Osaka-mono, "MS Gothic", monospace;
   $list-mac: Helvetica, "Hiragino Kaku Gothic ProN", Meiryo, fantasy;
   $list-default: Meiryo, 'MS PGothic', sans-serif;
-
   @if $gothic {
-    @if $add != ''{
+    @if $add != '' {
       font-family: $add, $list-gothic;
-    }@else{
+    }
+    @else {
       font-family: $list-gothic;
     }
   }
   @else if $serif {
-    @if $add != ''{
+    @if $add != '' {
       font-family: $add, $list-serif;
-    }@else{
+    }
+    @else {
       font-family: $list-serif;
     }
   }
-  @else if $prop {
-    @if $add != ''{
-      font-family: $add, $list-prop;
-    }@else{
-      font-family: $list-prop;
+  @else if $proportional {
+    @if $add != '' {
+      font-family: $add, $list-proportional;
+    }
+    @else {
+      font-family: $list-proportional;
     }
   }
   @else if $mac {
-    @if $add != ''{
+    @if $add != '' {
       font-family: $add, $list-mac;
-    }@else{
+    }
+    @else {
       font-family: $list-mac;
     }
   }
-  @else{
-    @if $add != ''{
+  @else {
+    @if $add != '' {
       font-family: $add, $list-default;
-    }@else{
+    }
+    @else {
       font-family: $list-default;
     }
   }
