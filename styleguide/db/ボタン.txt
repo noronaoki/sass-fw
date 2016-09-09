@@ -18,5 +18,15 @@
     "includeJs": "false",
     "isEdited": true,
     "isDeleted": false
+  },
+  {
+    "id": 6,
+    "name": "ボタン",
+    "code": "<a class=\"btn\">aaaaa</a>",
+    "description": "",
+    "inlineCss": "#snippet { \n  \n}",
+    "includeJs": "false",
+    "isEdited": false,
+    "isDeleted": false
   }
 ]

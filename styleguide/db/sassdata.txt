@@ -8,8 +8,17 @@
       "#f00": [
         "$red    "
       ],
+      "yellow": [
+        "$yellow    "
+      ],
       "#fff": [
         "$white  "
+      ],
+      "pink": [
+        "$pink"
+      ],
+      "blue": [
+        "$blue    "
       ]
     },
     "typography": [
