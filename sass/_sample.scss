@@ -59,16 +59,3 @@ body{
 .cancel-btn{
   @include btn-base(red, 300px, 100px);
 }
-
-
-/*
-可変長引数の例
-*/
-@mixin borders($val...){
-  border: $val;
-}
-
-
-.box{
-  @include borders(1px solid #ccc);
-}

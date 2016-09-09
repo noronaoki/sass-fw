@@ -1,15 +1,46 @@
 @charset "UTF-8";
 
-@import "config";
-@import "reset";
-// @import "sanitize";
-@import "variables";
-@import "prefix";
+//*************************************
+//
+// Foundation
+//
+// リセットCSS、要素セレクタ・属性セレクタのような最低限のスタイルを指定。
+// 詳細度を極力弱く、影響範囲を極力狭くする。
+//
+//*************************************
+// 判定用フラグなどの各種設定
+@import "foundation/config";
+// ほぼ全てのスタイルをリセット
+@import "foundation/reset";
+// HTML5系のタグをいい感じにするやつ
+@import "foundation/sanitize";
+// 色、フォントなどの変数定義
+@import "foundation/variables";
+
+//*************************************
+//
+// Layout
+//
+// Header、Footerなどページの共通レイアウトを制御するパーツを指定。
+// コンテナなどの大きなブロック単位もここに指定。
+//
+//*************************************
 @import "media-queries";
-@import "foundation";
-@import "module";
+
+//*************************************
+//
+// Object
+//
+// ┣ component
+// ┣ project
+// ┗ utility
+//
+//*************************************
+@import "object/component/foundation";
+@import "object/component/loading";
+@import "object/utility/module";
+
 @import "sprite";
 @import "sprite-retina";
 @import "mixins";
-@import "loading";
 @import "sample";
