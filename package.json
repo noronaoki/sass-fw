@@ -1,7 +1,7 @@
 {
   "name": "sass-framework",
   "version": "1.0.0",
-  "description": "",
+  "description": "同じセレクタを何度も記述せずに済むのでコードの可読性が良くなる   ただし、あまりにも深すぎるネストは逆効果なので適度に用いることが重要",
   "main": "gulpfile.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -9,18 +9,23 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "browser-sync": "^2.12.8",
+    "browser-sync": "^2.15.0",
     "devbridge-styleguide": "^0.4.17",
     "gulp": "^3.9.1",
-    "gulp-footer": "^1.0.5",
-    "gulp-if": "^2.0.1",
-    "gulp-live-server": "0.0.30",
     "gulp-pleeease": "^2.0.2",
     "gulp-plumber": "^1.1.0",
-    "gulp-ruby-sass": "^2.0.6",
+    "gulp-ruby-sass": "^2.1.0",
     "gulp-sourcemaps": "^1.6.0",
-    "gulp-styledocco": "0.0.3",
     "gulp-tinypng-compress": "^1.2.1",
     "gulp.spritesmith": "^6.2.1"
-  }
+  },
+  "dependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/noronaoki/sass-fw.git"
+  },
+  "bugs": {
+    "url": "https://github.com/noronaoki/sass-fw/issues"
+  },
+  "homepage": "https://github.com/noronaoki/sass-fw#readme"
 }
