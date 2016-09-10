@@ -42,7 +42,7 @@ gulp.task('sprite', function () {
     }
   }));
   spriteData.img.pipe(gulp.dest('assets/img/')); //imgNameで指定したスプライト画像の保存先
-  spriteData.css.pipe(gulp.dest('sass/')); //cssNameで指定したcssの保存先
+  spriteData.css.pipe(gulp.dest('sass/object/utility/')); //cssNameで指定したcssの保存先
 });
 
 
