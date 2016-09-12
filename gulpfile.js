@@ -3,7 +3,8 @@ var gulp        = require('gulp'),
     sourcemap   = require('gulp-sourcemaps'),
     plumber     = require('gulp-plumber'),
     spritesmith = require('gulp.spritesmith'),
-    pleeease    = require('gulp-pleeease'),
+    // pleeease    = require('gulp-pleeease'),
+    autoprefixer = require('gulp-autoprefixer'),
     tinypng     = require('gulp-tinypng-compress'),
     styleguide  = require('devbridge-styleguide'),
     browserSync = require('browser-sync');
@@ -16,12 +17,10 @@ gulp.task('sass', function() {
     sourcemap: true
   })
   .pipe(sourcemap.write())
-  .pipe(pleeease({
+  .pipe(autoprefixer({
       autoprefixer: {
           browsers: ['last 3 version', 'ie 11']
-      },
-      rem: false,
-      minifier: false
+      }
   }))
   .pipe(gulp.dest('assets/css/'));
 });

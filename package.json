@@ -12,6 +12,7 @@
     "browser-sync": "^2.15.0",
     "devbridge-styleguide": "^0.4.17",
     "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^3.1.1",
     "gulp-pleeease": "^2.0.2",
     "gulp-plumber": "^1.1.0",
     "gulp-ruby-sass": "^2.1.0",
