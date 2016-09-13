@@ -3,20 +3,23 @@ var gulp        = require('gulp'),
     sourcemap   = require('gulp-sourcemaps'),
     plumber     = require('gulp-plumber'),
     spritesmith = require('gulp.spritesmith'),
-    // pleeease    = require('gulp-pleeease'),
+    pixrem      = require('gulp-pixrem'),
     autoprefixer = require('gulp-autoprefixer'),
     tinypng     = require('gulp-tinypng-compress'),
     styleguide  = require('devbridge-styleguide'),
     browserSync = require('browser-sync');
 
 
-// sass,pleeease
+// sass, autoprefixer, pixrem
 gulp.task('sass', function() {
   return sass('sass/style.scss', {
     style: 'expanded', //expanded, nested, compressed
     sourcemap: true
   })
   .pipe(sourcemap.write())
+  .pipe(pixrem({
+    rootValue: '12px'
+  }))
   .pipe(autoprefixer({
       autoprefixer: {
           browsers: ['last 3 version', 'ie 11']

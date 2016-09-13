@@ -6,7 +6,7 @@ h1{
 body{
   @include font-family();
   // @include font-size(40);
-  font-size: 2rem;
+  font-size: 1.2rem;
   font-feature-settings:"liga" 1;
   text-rendering:optimizeLegibility;
   -webkit-font-smoothing: antialiased;
