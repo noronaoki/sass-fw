@@ -12,7 +12,7 @@
   ],
   "serverPort": 8889,
   "snippetTemplate": "styleguide/template.html",
-  "sassVariables": ["sass/foundation/_variables.scss"],
+  "sassVariables": ["sass/foundation/_variable.scss", "sass/foundation/_font.scss"],
   "maxSassIterations": 2000,
   "database": "styleguide/db",
   "categories": "styleguide/db/categories.txt",

@@ -1,21 +1,18 @@
 @charset "UTF-8";
-//*************************************
-//
-// reset
-//
-//*************************************
-html {font-size:62.5%; width:100%; height:100%;}
+
+html {
+  font-size: 62.5%;
+  width: 100%;
+  height: 100%;
+}
 
 body {
-font-size:10px;
-font-size:1.0rem;
-line-height:1;
-position:relative;
-text-align:center;
-text-size-adjust:100%;
--webkit-font-smoothing:antialiased;
-font-smoothing:antialiased;
--moz-osx-font-smoothing:grayscale;
-width:100%;
-height:100%;
+  font-size: 1.4rem;
+  line-height: 1.3;
+  text-size-adjust: 100%;
+  font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  @include font-family();
+  font-feature-settings: "liga" 1;
+  text-rendering: optimizeLegibility;
 }

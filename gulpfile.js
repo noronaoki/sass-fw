@@ -9,7 +9,7 @@ var gulp        = require('gulp'),
     browserSync = require('browser-sync');
 
 
-// sass, autoprefixer, pixrem
+// sass, autoprefixer
 gulp.task('sass', function() {
   return sass('sass/style.scss', {
     style: 'expanded', //expanded, nested, compressed

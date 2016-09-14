@@ -8,22 +8,13 @@
       "#f00": [
         "$red    "
       ],
-      "yellow": [
-        "$yellow    "
-      ],
       "#fff": [
         "$white  "
-      ],
-      "pink": [
-        "$pink"
-      ],
-      "blue": [
-        "$blue    "
       ]
     },
     "typography": [
       {
-        "variable": "$font-proxima",
+        "variable": "$font-proxima       ",
         "value": "'Proxima Nova', helvetica, sans-serif",
         "weights": [
           {
@@ -37,7 +28,7 @@
         ]
       },
       {
-        "variable": "$list-gothic",
+        "variable": "$list-gothic        ",
         "value": "Verdana, \"游ゴシック\", YuGothic, \"Hiragino Kaku Gothic ProN\", Meiryo, sans-serif",
         "weights": [
           {
@@ -51,7 +42,7 @@
         ]
       },
       {
-        "variable": "$list-serif",
+        "variable": "$list-serif         ",
         "value": "\"Times New Roman\", \"游明朝\", YuMincho, \"Hiragino Mincho ProN\", Meiryo, serif",
         "weights": [
           {
@@ -65,7 +56,7 @@
         ]
       },
       {
-        "variable": "$list-prop",
+        "variable": "$list-proportional  ",
         "value": "Osaka-mono, \"MS Gothic\", monospace",
         "weights": [
           {
@@ -79,7 +70,7 @@
         ]
       },
       {
-        "variable": "$list-mac",
+        "variable": "$list-mac           ",
         "value": "Helvetica, \"Hiragino Kaku Gothic ProN\", Meiryo, fantasy",
         "weights": [
           {
@@ -93,7 +84,7 @@
         ]
       },
       {
-        "variable": "$list-default",
+        "variable": "$list-default       ",
         "value": "Meiryo, 'MS PGothic', sans-serif",
         "weights": [
           {

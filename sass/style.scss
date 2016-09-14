@@ -10,20 +10,27 @@
 //*************************************
 // 判定用フラグなどの各種設定
 @import "foundation/config";
+
 // ほぼ全てのスタイルをリセット
-@import "foundation/reset";
+@import "foundation/ress";
+
 // HTML5系のタグをいい感じにするやつ
 @import "foundation/sanitize";
-// ベース
-@import "foundation/base";
+
 // フォント定義
 @import "foundation/font";
+
 // 色、フォントなどの変数定義
 @import "foundation/variable";
+
 // Mixin
 @import "foundation/mixin";
+
 // Function
-@import "foundation/mixin";
+@import "foundation/function";
+
+// ベース
+@import "foundation/base";
 
 //*************************************
 //
@@ -47,10 +54,13 @@
 // component
 @import "object/component/foundation";
 @import "object/component/loading";
+@import "object/component/button";
+
 // utility
 @import "object/utility/media-queries";
 @import "object/utility/helper";
 @import "object/utility/sprite";
 @import "object/utility/sprite-retina";
+
 // project
 @import "object/project/sample";

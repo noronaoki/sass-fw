@@ -1,0 +1,24 @@
+@charset "UTF-8";
+
+
+//*************************************
+//
+// ボタン
+//
+//*************************************
+
+// 引数にデフォルト値有り無しが混在する場合は、値無しが先に来ないとエラーになる
+@mixin btn-base($bg-color, $width:200px, $height:50px, $color:#000){
+  display: inline-block;
+  color: $color;
+  width: $width;
+  height: $height;
+  line-height: $height;
+  background-color: $bg-color;
+  padding:0 10px;
+  border-radius: 10px;
+  text-align: center;
+  &:hover{
+    background-color:rgba($bg-color,0.5);
+  }
+}
