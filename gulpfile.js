@@ -3,7 +3,6 @@ var gulp        = require('gulp'),
     sourcemap   = require('gulp-sourcemaps'),
     plumber     = require('gulp-plumber'),
     spritesmith = require('gulp.spritesmith'),
-    pixrem      = require('gulp-pixrem'),
     autoprefixer = require('gulp-autoprefixer'),
     tinypng     = require('gulp-tinypng-compress'),
     styleguide  = require('devbridge-styleguide'),
@@ -17,9 +16,6 @@ gulp.task('sass', function() {
     sourcemap: true
   })
   .pipe(sourcemap.write())
-  .pipe(pixrem({
-    rootValue: '12px'
-  }))
   .pipe(autoprefixer({
       autoprefixer: {
           browsers: ['last 3 version', 'ie 11']

@@ -1,0 +1,21 @@
+@charset "UTF-8";
+//*************************************
+//
+// reset
+//
+//*************************************
+html {font-size:62.5%; width:100%; height:100%;}
+
+body {
+font-size:10px;
+font-size:1.0rem;
+line-height:1;
+position:relative;
+text-align:center;
+text-size-adjust:100%;
+-webkit-font-smoothing:antialiased;
+font-smoothing:antialiased;
+-moz-osx-font-smoothing:grayscale;
+width:100%;
+height:100%;
+}

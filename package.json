@@ -13,7 +13,6 @@
     "devbridge-styleguide": "^0.4.17",
     "gulp": "^3.9.1",
     "gulp-autoprefixer": "^3.1.1",
-    "gulp-pixrem": "^1.0.0",
     "gulp-plumber": "^1.1.0",
     "gulp-ruby-sass": "^2.1.0",
     "gulp-sourcemaps": "^1.6.0",
