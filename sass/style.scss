@@ -8,20 +8,20 @@
 // 詳細度を極力弱く、影響範囲を極力狭くする。
 //
 //*************************************
-// 判定用フラグなどの各種設定
+// 判定用フラグやファイルパスなどの各種設定
 @import "foundation/config";
 
-// ほぼ全てのスタイルをリセット
+// スタイルをリセット
 @import "foundation/ress";
 
 // HTML5系のタグをいい感じにするやつ
 @import "foundation/sanitize";
 
+// 色定義
+@import "foundation/color";
+
 // フォント定義
 @import "foundation/font";
-
-// 色、フォントなどの変数定義
-@import "foundation/variable";
 
 // Mixin
 @import "foundation/mixin";
